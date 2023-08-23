@@ -265,6 +265,19 @@ ul {
   padding-bottom: 24px;
   align-items: flex-start;
 }
+@media (min-width: 768px) {
+  .address .list {
+    flex-direction: column;
+    margin-left: 122px;
+  }
+}
+@media (min-width: 1158px) {
+  .address .list  {
+    gap: 40px;
+    flex-direction: row;
+    margin-left: 0;
+  }
+}
 .studio-h {
   color: #2e2f42;
 }
@@ -332,6 +345,21 @@ ul {
 .contact-link:focus {
   color: #404bbf;
 }
+.btn-burgermenu {
+  display: flex; 
+  align-content: flex-end;
+margin: 0;
+margin-top: 24px;
+margin-right: 16px;
+}
+.icon-burgermenu {
+stroke: #2E2F42;
+}
+@media (min-width: 767px) {
+  .icon-burgermenu {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .navigator-panel {
     display: flex;
@@ -396,6 +424,12 @@ ul {
   gap: 24px;
   margin-bottom: 72px;
 }
+@media (max-width: 767px) {
+  .btnl {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
 .btn-all {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -438,6 +472,7 @@ ul {
 }
 .row {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
@@ -445,12 +480,28 @@ ul {
   padding-right: 0;
   margin: 0 auto;
 }
-.textrow {
-  width: calc((100% - 48px) / 3);
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
+@media (max-width: 767px) {
+  .row {
+  align-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .textrow {
+    width: calc((100% - 24px) / 2);
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1158px) {
+  .textrow {
+    width: calc((100% - 48px) / 3);
+  }
 }
 .cart-link {
   display: block;
@@ -812,8 +863,13 @@ ul {
 }
   }
   .subscribe {
-    justify-content: flex-start;
-    margin-left: 80px;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .subscribe {
+      margin-left: 80px;
+      justify-content: flex-start;
+    }
   }
   .form-email {
     flex-wrap: nowrap;
@@ -822,14 +878,20 @@ ul {
     margin-bottom: 132px;
     gap: 24px;
   }
-}
+  @media (max-width: 767px) {
+    .form-email {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
 .label-footer {
   display: flex;
     justify-content: center;
     color: #ffffff; 
 }
 .form-footer {
-  width: 398px;
+  width: 360px;
 height: 40px;
 flex-shrink: 0;
   background-color: transparent;
