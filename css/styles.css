@@ -39,6 +39,15 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/2x/people-office2x.jpg);
+  }
+}
+ 
 
 @media (max-width: 1158px) {
   .hero {
@@ -196,6 +205,10 @@ body {
   border-radius: 0px 0px 4px 4px;
   width: 264px;
 }
+.btn-hcont {
+  display: flex;
+  justify-content: flex-end;
+}
 @media (min-width: 768px) {
   .uls {
     flex-wrap: wrap;
@@ -205,13 +218,10 @@ body {
   }
   .team-card {
     width: calc((100% - 48px) / 2);
-    margin: 0;
   }
 }
 @media (min-width: 1158px) {
   .uls {
-    flex-wrap: wrap;
-    flex-direction: row;
     gap: 24px;
   }
   .team-card {
@@ -345,12 +355,12 @@ ul {
 .contact-link:focus {
   color: #404bbf;
 }
-.btn-burgermenu {
-  display: flex; 
-  align-content: flex-end;
+.menu-toggle  {
 margin: 0;
 margin-top: 24px;
 margin-right: 16px;
+background-color: transparent;
+    border-color: transparent;
 }
 .icon-burgermenu {
 stroke: #2E2F42;
@@ -916,6 +926,9 @@ flex-shrink: 0;
   .label-footer::placeholder {
     color: var(--white);
   }
+  .form-footer + .label-footer {
+    color: #FFF;
+  }
   .label-footer {
     max-width: 264px;
     color: var(--white);
@@ -953,6 +966,72 @@ flex-shrink: 0;
 }
 .icon-subs {
   margin-left: 16px;
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #FFFFFF;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.item-menu {
+  color: var(--ocean, #404BBF);
+font-size: 36px;
+font-weight: 700;
+line-height: 1.111;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+}
+.nav-curr {
+  position: relative;
+  color: var(--ocean, #404bbf);
+}
+.adr-menu-list {
+  margin: 0;
+  margin-top: 192px;
+}
+.item-menu-tel {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+.menu-list-icon {
+  display: flex;
+  gap: 56px;
+  margin: 0;
+  margin-top: 48px;
+  margin-left: 10px;
+}
+.icon-menu {
+  width: 40px;
+height: 40px;
+flex-shrink: 0;
+background-color: var(--iris, #4D5AE5);
+border-radius: 50%;
+padding: 8px;
 }
 .background {
   position: fixed;

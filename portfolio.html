@@ -25,25 +25,24 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="navigator-panel">
+        
         <nav class="nav">
           <a class="link logo" href="./index.html"
             >Web<span class="studio-h">Studio</span></a
           >
           <ul class="list helink">
             <li class="html">
-              <a class="link nav-link" href="./index.html">Studio</a>
+              <a class="link nav-link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="html">
-              <a class="link nav-link nav-current" href="./portfolio.html"
-                >Portfolio</a
-              >
+              <a class="link nav-link nav-current" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="html">
               <a class="link nav-link" href="">Contacts</a>
             </li>
           </ul>
-
         </nav>
         <address class="address">
           <ul class="list adr-list">
@@ -59,7 +58,15 @@
             </li>
           </ul>
         </address>
-      </div>
+        <div class="btn-hcont">
+          <button class="menu-toggle  js-open-menu" type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg class="icon-burgermenu" width="32" height="22">
+              <use href="./images/icons.svg#icon-Vector-3"></use>
+            </svg>
+            </button>
+          </div>
       </div>
     </header>
     <div class="container">
@@ -90,6 +97,7 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Banking App Interface Concept2x.jpg"
                       src="./images/psection1/img3.jpg"
                       width="360"
                       alt="Banking App Interface Concept"
@@ -110,9 +118,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Cashless Payment2x.jpg"
                       src="./images/psection1/img2.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Cashless Payment"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -130,9 +139,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Meditation App2x.jpg"
                       src="./images/psection1/img1.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Meditation App"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -150,9 +160,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Taxi Service2x.jpg"
                       src="./images/psection2/img3.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Taxi Service"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -170,9 +181,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Screen Illustrations2x.jpg"
                       src="./images/psection2/img2.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Screen Illustrations"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -190,9 +202,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Online Courses2x.jpg"
                       src="./images/psection2/img1.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Online Courses"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -210,9 +223,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Instagram Stories Concept2x.jpg"
                       src="./images/psection3/img3.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Instagram Stories Concept"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -230,9 +244,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Organic Food2x.jpg"
                       src="./images/psection3/img2.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Organic Food"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -250,9 +265,10 @@
                 <a class="link cart-link" href="">
                   <div class="cart-img">
                     <img
+                    srcset="./images/2x/Fresh Coffee2x.jpg"
                       src="./images/psection3/img1.jpg"
                       width="360"
-                      alt="Banking App Interface Concept"
+                      alt="Fresh Coffee"
                     />
                     <p class="cart-img-p">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -339,5 +355,60 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button"  class="menu-toggle close js-close-menu">
+        <svg class="icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black-18dp-20"></use>
+        </svg>
+      </button>
+      <ul class="list menu-list">
+        <li class="item-menu">
+          <a class="link nav-link menu-link" href="./index.html"
+            >Studio</a
+          >
+        </li>
+        <li class="item-menu">
+          <a class="link nav-curr  nav-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="item-menu">
+          <a class="link nav-link" href="">Contacts</a>
+        </li>
+      </ul>
+      <ul class="list adr-menu-list">
+        <li class="adr-tel item-menu-tel">
+          <a class="link  contact-menu-tel nav-curr" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="adr-email">
+          <a class="link contact-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="menu-list-icon">
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-insta"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-faceboock"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-linkedin"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="navigator-panel">
+        
         <nav class="nav">
           <a class="link logo" href="./index.html"
             >Web<span class="studio-h">Studio</span></a
@@ -60,12 +60,15 @@
             </li>
           </ul>
         </address>
-      </div>
-      <button class="visually-hidden btn-burgermenu">
-      <svg class="icon-burgermenu" width="32" height="22">
-        <use href="./images/icons.svg#icon-Vector-3"></use>
-      </svg>
-      </button>
+        <div class="btn-hcont">
+          <button class="menu-toggle  js-open-menu" type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg class="icon-burgermenu" width="32" height="22">
+              <use href="./images/icons.svg#icon-Vector-3"></use>
+            </svg>
+            </button>
+          </div>
       </div>
     </header>
 
@@ -141,6 +144,7 @@
           <ul class="list wedoing">
             <li class="list wedli">
               <img
+              srcset="./images/2x/comp2x.jpg"
                 src="./images/computer.jpg"
                 width="360"
                 alt="computer grafics"
@@ -148,6 +152,7 @@
             </li>
             <li class="list wedli">
               <img
+              srcset="./images/2x/tel2x.jpg"
                 src="./images/telm.jpg"
                 width="360"
                 alt="telephone messanger"
@@ -155,6 +160,7 @@
             </li>
             <li class="list wedli">
               <img
+              srcset="./images/2x/telandcomp2x.jpg"
                 src="./images/comptel.jpg"
                 width="360"
                 alt="computer and telephone"
@@ -170,6 +176,7 @@
           <ul class="list uls">
             <li class="team-card">
               <img
+                srcset="./images/2x/mark2x.jpg"
                 src="./images/MarkGuerrero.jpg"
                 width="264"
                 alt="Mark Guerrero"
@@ -214,7 +221,9 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/TomFord.jpg" width="264" alt="Tom Ford" />
+              <img 
+              srcset="./images/2x/tom2x.jpg"
+              src="./images/TomFord.jpg" width="264" alt="Tom Ford" />
               <div class="team">
                 <h3 class="captionst">Tom Ford</h3>
                 <p class="parp">Frontend Developer</p>
@@ -256,6 +265,7 @@
             </li>
             <li class="team-card">
               <img
+              srcset="./images/2x/camilia2x.jpg"
                 src="./images/CamilaGarcia.jpg"
                 width="264"
                 alt="Camila Garcia"
@@ -301,6 +311,7 @@
             </li>
             <li class="team-card">
               <img
+              srcset="./images/2x/daniel2x.jpg"
                 src="./images/DanielWilson.jpg"
                 width="264"
                 alt="Daniel Wilson"
@@ -471,6 +482,60 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button"  class="menu-toggle close js-close-menu">
+        <svg class="icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black-18dp-20"></use>
+        </svg>
+      </button>
+      <ul class="list menu-list">
+        <li class="item-menu">
+          <a class="link nav-link nav-curr menu-link" href="./index.html"
+            >Studio</a
+          >
+        </li>
+        <li class="item-menu">
+          <a class="link nav-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="item-menu">
+          <a class="link nav-link" href="">Contacts</a>
+        </li>
+      </ul>
+      <ul class="list adr-menu-list">
+        <li class="adr-tel item-menu-tel">
+          <a class="link  contact-menu-tel nav-curr" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="adr-email">
+          <a class="link contact-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="menu-list-icon">
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-insta"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-faceboock"></use>
+          </svg>
+        </a></li>
+        <li class="icon-menu"><a class="link-icon" href="">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-linkedin"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </div>
     <div class="background is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close" data-modal-close>
@@ -556,6 +621,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
